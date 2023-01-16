@@ -88,6 +88,12 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+let passLength = "10";    // This variable is storing the user input choice for the password length between 10 and 64. 
+let spCharacters ;        // This variable is storing the user input  choice as true or false for the special characters.  
+let loCharacters ;        // This variable is storing the user input  choice as true or false for the lowerCase characters. 
+let upCharacters ;        // This variable is storing the user input  choice as true or false for the upperCase  characters. 
+let numCharacters ;       // This variable is storing the user input  choice as true or false for the numerical  characters. 
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
