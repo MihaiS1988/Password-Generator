@@ -88,6 +88,7 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
 let passLength = "10";    // This variable is storing the user input choice for the password length between 10 and 64. 
 let spCharacters ;        // This variable is storing the user input  choice as true or false for the special characters.  
 let loCharacters ;        // This variable is storing the user input  choice as true or false for the lowerCase characters. 
@@ -112,7 +113,7 @@ function getPasswordOptions() {
             loCharacters = confirm("If you want to include lowerCase characters press 'OK' if not, press 'Cancel'");
         }
 };
-
+ 
 function generatePassword(length, numCh, uppCh, specialCh, lowerCh) {
    let charactersArray= []; 
    if (loCharacters){
@@ -141,10 +142,10 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(passLength,numericCharacters,upperCasedCharacters,specialCharacters,lowerCasedCharacters);
   var passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+  passwordText.value = password.join('');
 }
 
 // Add event listener to generate button
